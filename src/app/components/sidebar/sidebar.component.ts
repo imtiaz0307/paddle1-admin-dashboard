@@ -10,50 +10,50 @@ export class SidebarComponent {
     {
       title: "Dashboard",
       icon: "icon",
-      link: "/"
+      link: "/dashboard"
     },
     {
       title: "Seasons",
       icon: "icon",
-      link: "/"
+      link: "/seasons"
     },
     {
       title: "Players",
       icon: "icon",
-      link: "/"
+      link: "/players"
     },
     {
       title: "Clubs",
       icon: "icon",
-      link: "/"
+      link: "/clubs"
     },
     {
       title: "City",
       icon: "icon",
-      link: "/"
+      link: "/city"
     },
     {
       title: "News",
       icon: "icon",
-      link: "/"
+      link: "/news"
     },
     {
       title: "Ads",
       icon: "icon",
-      link: "/"
+      link: "/ads"
     },
     {
       title: "Admin Users",
       icon: "icon",
-      link: "/"
+      link: "/admins"
     },
     {
       title: "Settings",
       icon: "icon",
-      link: "/"
+      link: "/settings"
     },
   ]
-  showNav: boolean = true;
+  showNav: boolean = false;
 
   toggleNav = () => {
     this.showNav = !this.showNav

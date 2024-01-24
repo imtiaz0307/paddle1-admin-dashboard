@@ -1,0 +1,38 @@
+<div class="top-bar">
+    <h3>Admin Users</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New Admin</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Password</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let admin of adminsData">
+            <td>{{admin.No}}</td>
+            <td>{{admin.Name}}</td>
+            <td>{{admin.Email}}</td>
+            <td>{{admin.City}}</td>
+            <td>{{admin.Password}}</td>
+            <td>{{admin.Status}}</td>
+            <td>
+                <div class="actions">
+                    <app-switch></app-switch>
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

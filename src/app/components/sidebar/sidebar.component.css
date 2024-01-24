@@ -43,7 +43,7 @@
     gap: 1.5rem;
 }
 
-.nav_item:nth-child(1) a {
+.nav_item .active {
     background-color: var(--color-red);
 }
 

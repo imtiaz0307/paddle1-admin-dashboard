@@ -1,0 +1,36 @@
+<div class="top-bar">
+    <h3>City</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New City</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>City</th>
+            <th>Contact Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let city of cityData">
+            <td>{{city.No}}</td>
+            <td>{{city.City}}</td>
+            <td>{{city.ContactName}}</td>
+            <td>{{city.Email}}</td>
+            <td>{{city.Phone}}</td>
+            <td>
+                <div class="actions">
+                    <app-switch></app-switch>
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

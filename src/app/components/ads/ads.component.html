@@ -1,0 +1,39 @@
+<div class="top-bar">
+    <h3>Ads</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New Ads</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Link</th>
+            <th>City</th>
+            <th>Sports</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ads of adsData">
+            <td>{{ads.No}}</td>
+            <td>
+                <img [src]="ads.Image" alt="">
+            </td>
+            <td>{{ads.Title}}</td>
+            <td>{{ads.Link}}</td>
+            <td>{{ads.City}}</td>
+            <td>{{ads.Sports}}</td>
+            <td>
+                <div class="actions">
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

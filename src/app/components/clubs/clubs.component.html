@@ -1,0 +1,38 @@
+<div class="top-bar">
+    <h3>Clubs</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New Club</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Club Name</th>
+            <th>City</th>
+            <th>Sport</th>
+            <th>Sport</th>
+            <th>Website</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let club of clubsData">
+            <td>{{club.No}}</td>
+            <td>{{club.ClubName}}</td>
+            <td>{{club.City}}</td>
+            <td>{{club.Sport1}}</td>
+            <td>{{club.Sport2}}</td>
+            <td>{{club.Website}}</td>
+            <td>
+                <div class="actions">
+                    <button>View</button>
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

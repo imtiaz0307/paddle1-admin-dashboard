@@ -1,0 +1,41 @@
+<div class="top-bar">
+    <h3>News</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add News</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>City</th>
+            <th>Sports</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let news of newsData">
+            <td>{{news.No}}</td>
+            <td>
+                <img [src]="news.Image" alt="">
+            </td>
+            <td>{{news.Title}}</td>
+            <td>{{news.Date}}</td>
+            <td>{{news.City}}</td>
+            <td>{{news.Sports}}</td>
+            <td class="description">{{news.Content}}</td>
+            <td>
+                <div class="actions">
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

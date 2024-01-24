@@ -1,0 +1,64 @@
+<div class="top-bar">
+    <h3>Seasons</h3>
+    <div class="input-container">
+        <label for="city">City</label>
+        <select name="city" id="city">
+            <option value="" disabled>Select City</option>
+            <option value="sukkur">Sukkur</option>
+            <option value="karachi">Karachi</option>
+        </select>
+    </div>
+    <div class="input-container">
+        <label for="sports">Sports</label>
+        <select name="sports" id="sports">
+            <option value="" disabled>Select Sports</option>
+            <option value="sukkur">Sport 1</option>
+            <option value="karachi">Sport 2</option>
+        </select>
+    </div>
+    <div class="input-container">
+        <label for="seasons">Seasons</label>
+        <select name="seasons" id="seasons">
+            <option value="" disabled>Select Season</option>
+            <option value="sukkur">Season 1</option>
+            <option value="karachi">Season 2</option>
+        </select>
+    </div>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New Session</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Season</th>
+            <th>Sport</th>
+            <th>City</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let season of seasonsData">
+            <td>{{season.No}}</td>
+            <td>{{season.Season}}</td>
+            <td>{{season.Sport}}</td>
+            <td>{{season.City}}</td>
+            <td>{{season.StartDate}}</td>
+            <td>{{season.EndDate}}</td>
+            <td>{{season.Status}}</td>
+            <td>
+                <div class="actions">
+                    <button>Leagues</button>
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

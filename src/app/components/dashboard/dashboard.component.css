@@ -1,7 +1,3 @@
-.main-content {
-    padding: 2rem;
-}
-
 .cards {
     display: flex;
     flex-wrap: wrap;

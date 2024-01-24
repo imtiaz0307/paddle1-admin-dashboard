@@ -4,6 +4,7 @@
     --color-white: #fff;
     --color-shadow: #33333349;
     --color-red: #e50c44;
+    --color-blue-light: #00c7d2;
 }
 
 * {
@@ -12,4 +13,113 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    border: 1px solid var(--color-shadow);
+    background-color: var(--color-white);
+}
+
+tr {
+    border-bottom: 1px solid var(--color-shadow);
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    padding: 1.5rem;
+}
+
+td img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid var(--bg-dark);
+    border-radius: 15px;
+}
+
+.description {
+    max-width: 200px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.actions button {
+    padding: .35rem .75rem;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-blue-light);
+    color: var(--color-blue-light);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.actions .edit {
+    color: var(--color-blue-light);
+}
+
+.actions .delete {
+    color: var(--color-red);
+}
+
+.top-bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.top-bar h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.btn {
+    font-size: 1rem;
+    background-color: var(--color-red);
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn p:nth-child(1) {
+    font-size: 1.25rem;
+}
+
+.input-container {
+    flex: 1;
+    position: relative;
+}
+
+.input-container label {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.input-container select {
+    width: 100%;
+    outline: none;
+    border: 1px solid #afafaf;
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1rem;
 }

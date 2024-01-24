@@ -1,0 +1,40 @@
+.switch-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.switch-container input {
+    display: none;
+}
+
+.switch-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    border-radius: 17px;
+    transition: background-color 0.3s;
+    border: 1px solid var(--bg-dark);
+}
+
+.switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-red);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.switch-container input:checked+.switch-track .switch-thumb {
+    transform: translateX(30px);
+    background-color: var(--color-blue-light);
+}

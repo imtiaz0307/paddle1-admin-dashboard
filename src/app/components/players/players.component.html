@@ -1,0 +1,40 @@
+<div class="top-bar">
+    <h3>Players</h3>
+    <button class="btn">
+        <p>+</p>
+        <p>Add New Player</p>
+    </button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Player Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Dob</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of playersData">
+            <td>{{player.No}}</td>
+            <td>{{player.PlayerName}}</td>
+            <td>{{player.Email}}</td>
+            <td>{{player.Phone}}</td>
+            <td>{{player.City}}</td>
+            <td>{{player.Gender}}</td>
+            <td>{{player.Dob}}</td>
+            <td>
+                <div class="actions">
+                    <button>Details</button>
+                    <span class="edit">edit</span>
+                    <span class="delete">delete</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

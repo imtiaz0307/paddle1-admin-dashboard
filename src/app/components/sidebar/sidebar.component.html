@@ -5,7 +5,7 @@
     </div>
     <ul class="nav_menu">
         <li *ngFor="let item of navmenu" class="nav_item">
-            <a [href]="item.link">
+            <a [routerLink]="item.link" routerLinkActive="active">
                 <span>
                     {{item.icon}}
                 </span>
