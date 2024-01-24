@@ -1,0 +1,10 @@
+.page-content {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-content {
+    flex: 1;
+    background-color: var(--bg-light);
+}

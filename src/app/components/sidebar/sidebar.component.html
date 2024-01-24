@@ -1,0 +1,18 @@
+<nav class="nav" [class.nav_closed]="showNav">
+    <div class="logo_toggle">
+        <h2 class="logo">Logo</h2>
+        <span class="toggle" (click)="toggleNav()">X</span>
+    </div>
+    <ul class="nav_menu">
+        <li *ngFor="let item of navmenu" class="nav_item">
+            <a [href]="item.link">
+                <span>
+                    {{item.icon}}
+                </span>
+                <span class="title">
+                    {{item.title}}
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>

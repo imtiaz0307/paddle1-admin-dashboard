@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg-dark: #090628;
+    --bg-light: #f3f1f9;
+    --color-white: #fff;
+    --color-shadow: #33333349;
+    --color-red: #e50c44;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}

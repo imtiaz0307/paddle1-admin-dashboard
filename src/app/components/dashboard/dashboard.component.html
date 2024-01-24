@@ -1,0 +1,13 @@
+<main class="main-content">
+    <div class="cards">
+        <div class="card" *ngFor="let item of cardsData">
+            <div class="icon-con" [style.backgroundColor]="item.color">
+                {{item.icon}}
+            </div>
+            <div class="card-details">
+                <span>{{item.title}}</span>
+                <h5>{{item.count.toLocaleString("us")}}</h5>
+            </div>
+        </div>
+    </div>
+</main>

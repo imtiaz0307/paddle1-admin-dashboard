@@ -1,0 +1,39 @@
+.header {
+    padding: 2rem;
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px var(--color-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bread-crumb {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bc-items {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.user img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.user span {
+    font-size: 1rem;
+    font-weight: 500;
+}

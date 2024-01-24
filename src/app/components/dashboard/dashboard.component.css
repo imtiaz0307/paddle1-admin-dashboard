@@ -1,0 +1,41 @@
+.main-content {
+    padding: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    border-radius: 5px;
+}
+
+.icon-con {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.card-details span {
+    font-size: .9rem;
+    color: #afafaf;
+}
+
+.card-details h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+
+}
