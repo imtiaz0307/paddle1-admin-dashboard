@@ -1,7 +1,7 @@
 <div [style.display]="showSpecific ? 'none':'block'">
     <div class="top-bar">
         <h3>Clubs</h3>
-        <button class="btn">
+        <button class="btn" (click)="toggleAddClubModal()">
             <p>+</p>
             <p>Add New Club</p>
         </button>
@@ -87,6 +87,85 @@
             <div class="dc-item">
                 <div class="icon">t</div>
                 <span>info@padelporec.com</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modals -->
+<!-- add club modal -->
+<div class="modal-overlay" [class]="showAddClubModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add New Club</h3>
+            <button (click)="toggleAddClubModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <div class="files">
+                <label class="add-file" for="add-file">
+                    <input type="file" name="add-file" id="add-file" hidden>
+                    <h2>+</h2>
+                </label>
+                <div class="uploaded-files">
+                    <div class="uploaded-file">
+                        <img src="../../../assets/image.jpg" alt="uploaded">
+                        <div class="close">x</div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Club Name:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type name">
+                </div>
+                <div class="input-con">
+                    <label for="start-date">Sports:</label>
+                    <select>
+                        <option value="">Select Sports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Email:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type email">
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Organizer:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Organizer">
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="start-date">City:</label>
+                    <select>
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Location:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Location">
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Website:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Website">
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">About:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Here">
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Submit
+                </button>
+                <button (click)="toggleAddClubModal()" class="btn primary outlined">
+                    Cancel
+                </button>
             </div>
         </div>
     </div>

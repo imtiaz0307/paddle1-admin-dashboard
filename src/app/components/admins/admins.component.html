@@ -1,6 +1,6 @@
 <div class="top-bar">
     <h3>Admin Users</h3>
-    <button class="btn">
+    <button class="btn" (click)="toggleAddAdminModal()">
         <p>+</p>
         <p>Add New Admin</p>
     </button>
@@ -36,3 +36,47 @@
         </tr>
     </tbody>
 </table>
+
+<div class="modal-overlay" [class]="showAddAdminModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add New Admin</h3>
+            <button (click)="toggleAddAdminModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Name:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Name">
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Email:</label>
+                    <input type="email" name="season-name" id="season-name" placeholder="Type Email">
+                </div>
+            </div>
+            <div class="inputs-group">
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label>City:</label>
+                    <select>
+                        <option value="">City</option>
+                        <option value="a">A</option>
+                    </select>
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Password:</label>
+                    <input type="password" name="season-name" id="season-name" placeholder="Type Password">
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Submit
+                </button>
+                <button (click)="toggleAddAdminModal()" class="btn primary outlined">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

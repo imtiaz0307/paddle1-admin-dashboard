@@ -1,7 +1,7 @@
 <div [style.display]="showAllPlayers || showSpecific ? 'none':'block'">
     <div class="top-bar">
         <h3>Players</h3>
-        <button class="btn">
+        <button class="btn" (click)="toggleAddPlayerModal()">
             <p>+</p>
             <p>Add New Player</p>
         </button>
@@ -111,6 +111,60 @@
                 Quo cum amet maiores magnam incidunt voluptatum. Reiciendis soluta iste, harum sequi saepe cupiditate
                 asperiores non corporis excepturi aspernatur odio fugit pariatur, eos aliquam dicta cumque rerum numquam
                 ducimus, quasi consequuntur cum neque! Reiciendis ex maiores placeat?</h5>
+        </div>
+    </div>
+</div>
+
+<!-- add player modal -->
+<div class="modal-overlay" [class]="showAddPlayerModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add New Player</h3>
+            <button (click)="toggleAddPlayerModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">City:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type city">
+                </div>
+                <div class="input-con">
+                    <label for="start-date">Sports:</label>
+                    <select>
+                        <option value="">Select Sports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="start-date">Gender</label>
+                    <select>
+                        <option value="">Select Sports</option>
+                    </select>
+                </div>
+                <div class="input-con">
+                    <label for="start-date">League:</label>
+                    <select>
+                        <option value="">Select Sports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="start-date">Active Seasons:</label>
+                    <select>
+                        <option value="">Select Sports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Submit
+                </button>
+                <button (click)="toggleAddPlayerModal()" class="btn primary outlined">
+                    Cancel
+                </button>
+            </div>
         </div>
     </div>
 </div>

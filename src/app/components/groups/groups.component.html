@@ -1,13 +1,16 @@
 <div class="top-bar">
     <h3>Groups</h3>
     <div class="btn-group">
-        <button class="btn primary" style="background-color: transparent; color: var(--color-blue-light);">
+        <button class="btn primary" style="background-color: transparent; color: var(--color-blue-light);"
+            (click)="toggleAddWoModal()">
             Add W.O Scores
         </button>
-        <button class="btn" style="background-color: transparent; color: var(--color-red);">
+        <button class="btn" style="background-color: transparent; color: var(--color-red);"
+            (click)="toggleAddScoresModal()">
             Add Scores
         </button>
-        <button class="btn primary" style="background-color: transparent; color: var(--color-blue-light);">
+        <button class="btn primary" style="background-color: transparent; color: var(--color-blue-light);"
+            (click)="toggleScoresModal()">
             Scores List
         </button>
         <button class="btn" style="background-color: transparent; color: var(--color-red);">
@@ -50,5 +53,214 @@
                 </tbody>
             </table>
         </div>
+    </div>
+</div>
+
+
+<!-- add wo score -->
+<div class="modal-overlay" [class]="showAddWoModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add W.O Scores</h3>
+            <button (click)="toggleAddWoModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <h3 class="mb-head">Unos Rezultata</h3>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Datum:</label>
+                    <input type="date" name="season-name" id="season-name" placeholder="Type Name">
+                </div>
+                <div class="input-con">
+                    <label for="start-date">Grupe:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="end-registration">Pobjednik:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+                <div class="input-con">
+                    <label for="end-date">Parozeni:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Unesi
+                </button>
+                <button (click)="toggleAddWoModal()" class="btn primary outlined">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- add scores modal -->
+<div class="modal-overlay" [class]="showAddScoresModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add W.O Scores</h3>
+            <button (click)="toggleAddScoresModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <h3 class="mb-head">Unos Rezultata</h3>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="start-date">Tereni:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Datum:</label>
+                    <input type="date" name="season-name" id="season-name" placeholder="Type Name">
+                </div>
+                <div class="input-con">
+                    <label for="start-date">Grupe:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="end-registration">Pobjednik:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+                <div style="display: flex; max-width: 50%; gap: 2rem;">
+                    <div class="input-con">
+                        <label for="">Set 1:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="input-con">
+                        <label for="">Set 2:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="input-con">
+                        <label for="">Set 3:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="end-registration">Parozeni:</label>
+                    <select>
+                        <option value="" disabled>Select</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                </div>
+                <div style="display: flex; max-width: 50%; gap: 2rem;">
+                    <div class="input-con">
+                        <label for="">Set 1:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="input-con">
+                        <label for="">Set 2:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="input-con">
+                        <label for="">Set 3:</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Unesi
+                </button>
+                <button (click)="toggleAddScoresModal()" class="btn primary outlined">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scores modal -->
+<div class="modal-overlay" [class]="showScoresModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add W.O Scores</h3>
+            <button (click)="toggleScoresModal()">x</button>
+        </div>
+        <table style="margin-top: 0;">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Grupa</th>
+                    <th>Datum</th>
+                    <th>City</th>
+                    <th>Result</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Grupa b23</td>
+                    <td>15:30 08 Dec 2023</td>
+                    <td>Padel central puerto</td>
+                    <td>Bodlsa / dsaoijds /dsadas</td>
+                    <td>del</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Grupa b23</td>
+                    <td>15:30 08 Dec 2023</td>
+                    <td>Padel central puerto</td>
+                    <td>Bodlsa / dsaoijds /dsadas</td>
+                    <td>del</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Grupa b23</td>
+                    <td>15:30 08 Dec 2023</td>
+                    <td>Padel central puerto</td>
+                    <td>Bodlsa / dsaoijds /dsadas</td>
+                    <td>del</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Grupa b23</td>
+                    <td>15:30 08 Dec 2023</td>
+                    <td>Padel central puerto</td>
+                    <td>Bodlsa / dsaoijds /dsadas</td>
+                    <td>del</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Grupa b23</td>
+                    <td>15:30 08 Dec 2023</td>
+                    <td>Padel central puerto</td>
+                    <td>Bodlsa / dsaoijds /dsadas</td>
+                    <td>del</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -64,4 +64,23 @@ export class SeasonsComponent {
 
   toggleLeague = () => this.showLeague = !this.showLeague;
   toggleGroup = () => this.showGroups = !this.showGroups;
+
+
+  // selected
+  currentSeason: any = null;
+
+  // modals
+
+  // seasons
+  showAddSeasonModal: boolean = false;
+  toggleAddSeasonModal = () => this.showAddSeasonModal = !this.showAddSeasonModal;
+  showEditSeasonModal: boolean = false;
+  toggleEditSeasonModal = (season: any) => {
+    this.currentSeason = season;
+    this.showEditSeasonModal = !this.showEditSeasonModal;
+  }
+
+  // leagues
+  showAddLeagueModal: boolean = false;
+  toggleAddLeagueModal = () => this.showAddLeagueModal = !this.showAddLeagueModal;
 }

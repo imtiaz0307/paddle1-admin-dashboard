@@ -24,4 +24,7 @@ export class AdminsComponent {
       Status: 'Disabled',
     },
   ]
+
+  showAddAdminModal: boolean = false;
+  toggleAddAdminModal = () => this.showAddAdminModal = !this.showAddAdminModal;
 }

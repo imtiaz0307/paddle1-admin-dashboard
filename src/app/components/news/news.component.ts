@@ -28,4 +28,7 @@ export class NewsComponent {
       Action: 'View',
     },
   ]
+
+  showAddNewsModal: boolean = true;
+  toggleAddNewsModal = () => this.showAddNewsModal = !this.showAddNewsModal;
 }

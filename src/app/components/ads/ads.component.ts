@@ -35,4 +35,7 @@ export class AdsComponent {
       Action: 'View',
     },
   ]
+
+  showAddAdsModal: boolean = true;
+  toggleAddAdsModal = () => this.showAddAdsModal = !this.showAddAdsModal;
 }

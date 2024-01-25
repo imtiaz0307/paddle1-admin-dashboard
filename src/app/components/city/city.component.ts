@@ -24,4 +24,6 @@ export class CityComponent {
       Action: 'Delete',
     }
   ]
+  showAddCityModal: boolean = false;
+  toggleAddCityModal = () => this.showAddCityModal = !this.showAddCityModal
 }

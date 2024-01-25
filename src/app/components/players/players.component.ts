@@ -89,6 +89,10 @@ export class PlayersComponent {
   showAllPlayers: boolean = false;
   toggleShowAllPlayers = () => this.showAllPlayers = !this.showAllPlayers;
 
-  showSpecific: boolean = true;
+  showSpecific: boolean = false;
   toggleSpecific = () => this.showSpecific = !this.showSpecific;
+
+  // modals
+  showAddPlayerModal: boolean = false;
+  toggleAddPlayerModal = () => this.showAddPlayerModal = !this.showAddPlayerModal;
 }

@@ -146,4 +146,13 @@ export class GroupsComponent {
       ],
     }
   ]
+
+
+  // modals
+  showAddWoModal: boolean = false;
+  toggleAddWoModal = () => this.showAddWoModal = !this.showAddWoModal;
+  showAddScoresModal: boolean = false;
+  toggleAddScoresModal = () => this.showAddScoresModal = !this.showAddScoresModal;
+  showScoresModal: boolean = false;
+  toggleScoresModal = () => this.showScoresModal = !this.showScoresModal;
 }

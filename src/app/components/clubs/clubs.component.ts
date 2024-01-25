@@ -54,11 +54,15 @@ export class ClubsComponent {
     },
   ]
 
-  showSpecific: boolean = true;
+  showSpecific: boolean = false;
   toggleSpecific = () => this.showSpecific = !this.showSpecific;
 
   slider = ['../../../assets/image.jpg', '../../../assets/image2.jpg', '../../../assets/image.jpg', '../../../assets/image2.jpg']
   currentImage: number = 0;
 
   selectSlide = (num: number) => this.currentImage = num;
+
+  // modals
+  showAddClubModal: boolean = false;
+  toggleAddClubModal = () => this.showAddClubModal = !this.showAddClubModal;
 }

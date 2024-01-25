@@ -1,6 +1,6 @@
 <div class="top-bar">
     <h3>News</h3>
-    <button class="btn">
+    <button class="btn" (click)="toggleAddNewsModal()">
         <p>+</p>
         <p>Add News</p>
     </button>
@@ -39,3 +39,59 @@
         </tr>
     </tbody>
 </table>
+
+<div class="modal-overlay" [class]="showAddNewsModal ? 'modal-view' : ''">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Add News</h3>
+            <button (click)="toggleAddNewsModal()">x</button>
+        </div>
+        <div class="modal-body">
+            <div class="files">
+                <label class="add-file" for="add-file">
+                    <input type="file" name="add-file" id="add-file" hidden>
+                    <h2>+</h2>
+                </label>
+                <div class="uploaded-files">
+                    <div class="uploaded-file">
+                        <img src="../../../assets/image.jpg" alt="uploaded">
+                        <div class="close">x</div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label for="season-name">Title:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Title">
+                </div>
+                <div class="input-con">
+                    <label for="season-name">Sport:</label>
+                    <input type="text" name="season-name" id="season-name" placeholder="Type Sport">
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label>City:</label>
+                    <select>
+                        <option value="">City</option>
+                        <option value="a">A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputs-group">
+                <div class="input-con">
+                    <label>About:</label>
+                    <textarea rows="10" placeholder="Enter Here"></textarea>
+                </div>
+            </div>
+            <div class="buttons-group">
+                <button class="btn primary">
+                    Submit
+                </button>
+                <button (click)="toggleAddNewsModal()" class="btn primary outlined">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

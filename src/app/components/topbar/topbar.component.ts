@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./topbar.component.css']
 })
 export class TopbarComponent {
-
+  pathname = window.location.pathname.slice(1)
 }
