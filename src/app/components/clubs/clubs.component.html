@@ -1,38 +1,93 @@
-<div class="top-bar">
-    <h3>Clubs</h3>
-    <button class="btn">
-        <p>+</p>
-        <p>Add New Club</p>
-    </button>
+<div [style.display]="showSpecific ? 'none':'block'">
+    <div class="top-bar">
+        <h3>Clubs</h3>
+        <button class="btn">
+            <p>+</p>
+            <p>Add New Club</p>
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Club Name</th>
+                <th>City</th>
+                <th>Sport</th>
+                <th>Sport</th>
+                <th>Website</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let club of clubsData">
+                <td>{{club.No}}</td>
+                <td>{{club.ClubName}}</td>
+                <td>{{club.City}}</td>
+                <td>{{club.Sport1}}</td>
+                <td>{{club.Sport2}}</td>
+                <td>{{club.Website}}</td>
+                <td>
+                    <div class="actions">
+                        <button (click)="toggleSpecific()">View</button>
+                        <span class="edit">edit</span>
+                        <span class="delete">delete</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>Club Name</th>
-            <th>City</th>
-            <th>Sport</th>
-            <th>Sport</th>
-            <th>Website</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let club of clubsData">
-            <td>{{club.No}}</td>
-            <td>{{club.ClubName}}</td>
-            <td>{{club.City}}</td>
-            <td>{{club.Sport1}}</td>
-            <td>{{club.Sport2}}</td>
-            <td>{{club.Website}}</td>
-            <td>
-                <div class="actions">
-                    <button>View</button>
-                    <span class="edit">edit</span>
-                    <span class="delete">delete</span>
+<div [style.display]="!showSpecific ? 'none':'block'">
+    <div class="card">
+        <div class="card-header">
+            <button (click)="toggleSpecific()">
+                &larr;
+            </button>
+            <h3>Padel.hr</h3>
+        </div>
+        <div class="card-body">
+            <div class="swiper">
+                <div class="swiper-toggle swiper-prev" (click)="selectSlide(currentImage === 0 ? 3 : currentImage - 1)">
+                    &larr;</div>
+                <div class="swiper-toggle swiper-next" (click)="selectSlide(currentImage === 3 ? 0 : currentImage + 1)">
+                    &rarr;</div>
+                <img [src]="slider[currentImage]" alt="slider">
+            </div>
+            <div class="preview">
+                <div *ngFor="let img of slider; index as i" (click)="selectSlide(i)">
+                    <img [src]="img" alt="preview">
                 </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="card">
+            <div class="card-header">
+                <h3>Padel Centar Porec</h3>
+            </div>
+        </div>
+        <div class="details-card">
+            <div class="top">
+                <h5>Detalji</h5>
+            </div>
+            <div class="dc-item">
+                <div class="icon">t</div>
+                <span>+385 91 6024 412</span>
+            </div>
+            <div class="dc-item">
+                <div class="icon">t</div>
+                <span>Zabavni centar "Frata" - glavina cesta Porec - Tar</span>
+            </div>
+            <div class="dc-item">
+                <div class="icon">t</div>
+                <span>www.padelporec.com</span>
+            </div>
+            <div class="dc-item">
+                <div class="icon">t</div>
+                <span>info@padelporec.com</span>
+            </div>
+        </div>
+    </div>
+</div>

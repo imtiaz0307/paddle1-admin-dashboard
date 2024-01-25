@@ -136,3 +136,33 @@ td img {
     padding: 1rem;
     font-size: 1rem;
 }
+
+.card {
+    background-color: var(--color-white);
+    height: 100%;
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+}
+
+.card-header {
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.card-header button {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--color-blue-light);
+    cursor: pointer;
+    background-color: var(--color-white);
+}
+
+.card-header h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}

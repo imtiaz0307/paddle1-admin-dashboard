@@ -53,4 +53,12 @@ export class ClubsComponent {
       Action: 'View',
     },
   ]
+
+  showSpecific: boolean = true;
+  toggleSpecific = () => this.showSpecific = !this.showSpecific;
+
+  slider = ['../../../assets/image.jpg', '../../../assets/image2.jpg', '../../../assets/image.jpg', '../../../assets/image2.jpg']
+  currentImage: number = 0;
+
+  selectSlide = (num: number) => this.currentImage = num;
 }
