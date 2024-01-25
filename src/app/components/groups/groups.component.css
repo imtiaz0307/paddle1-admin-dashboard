@@ -1,0 +1,47 @@
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.row-header {
+    padding: 2rem 0 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-shadow);
+}
+
+.row-header h3 {
+    font-size: 1.45rem;
+}
+
+.row-body {
+    padding: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.group {
+    max-width: 390px;
+    flex: 1;
+}
+
+.group h4 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.group-table {
+    margin-top: 10px;
+    font-size: .7rem;
+}
+
+.group-table th,
+.group-table td {
+    padding: 10px;
+}
+
+.group-table thead {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}

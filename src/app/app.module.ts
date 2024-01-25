@@ -15,6 +15,7 @@ import { AdsComponent } from './components/ads/ads.component';
 import { AdminsComponent } from './components/admins/admins.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { GroupsComponent } from './components/groups/groups.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     AdsComponent,
     AdminsComponent,
     SwitchComponent,
-    SettingsComponent
+    SettingsComponent,
+    GroupsComponent
   ],
   imports: [
     BrowserModule,

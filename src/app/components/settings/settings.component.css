@@ -1,7 +1,7 @@
 .card {
     background-color: var(--color-white);
     height: 100%;
-    border: 1px solid var(--bg-dark);
+    border: 1px solid var(--color-shadow);
     border-radius: 10px;
 }
 
@@ -20,6 +20,7 @@
     font-size: 1rem;
     color: var(--color-blue-light);
     cursor: pointer;
+    background-color: var(--color-white);
 }
 
 .card-header h3 {
@@ -80,7 +81,7 @@
 }
 
 .bottom button.ol-btn {
-    background-color: transparent;
+    background-color: var(--color-white);
     border: 1px solid var(--color-blue-light);
     color: var(--color-blue-light);
 }

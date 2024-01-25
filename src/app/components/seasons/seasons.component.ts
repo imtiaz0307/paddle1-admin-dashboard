@@ -58,4 +58,10 @@ export class SeasonsComponent {
       Action: "Results"
     },
   ]
+
+  showLeague: boolean = false;
+  showGroups: boolean = false;
+
+  toggleLeague = () => this.showLeague = !this.showLeague;
+  toggleGroup = () => this.showGroups = !this.showGroups;
 }
