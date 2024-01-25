@@ -1,0 +1,147 @@
+.header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header button {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--color-blue-light);
+    cursor: pointer;
+    background-color: var(--color-white);
+}
+
+.header h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.players {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.player-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin-top: 3rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.pc-top {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.pct-p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.pct-p img {
+    height: 15px;
+    width: 15px;
+    object-fit: cover;
+    border-radius: 30px;
+    scale: 5;
+    transform-origin: bottom center;
+}
+
+.pct-p h5 {
+    font-size: 1rem;
+}
+
+.pc-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 2px solid var(--bg-light);
+}
+
+.pc-bottom span {
+    color: var(--color-blue-light);
+    font-size: 1rem;
+}
+
+.pc-bottom div {
+    background-color: var(--bg-dark);
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.card {
+    background-color: var(--color-white);
+    height: 100%;
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+}
+
+.card-header {
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.card-header button {
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color-shadow);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--color-blue-light);
+    cursor: pointer;
+    background-color: var(--color-white);
+}
+
+.card-header h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 4rem;
+}
+
+.cb-item {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.cb-item span {
+    color: #afafaf;
+    font: 1rem;
+    font-weight: 500;
+}
+
+.cb-item h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.cb-item.full {
+    grid-column: 1/4;
+}

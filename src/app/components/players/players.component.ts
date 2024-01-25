@@ -38,4 +38,57 @@ export class PlayersComponent {
       Action: "Edit"
     },
   ]
+
+  playerCard = [
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+    {
+      img: "../../../assets/image.jpg",
+      name: "Paulo Dybala",
+    },
+  ]
+
+  showAllPlayers: boolean = false;
+  toggleShowAllPlayers = () => this.showAllPlayers = !this.showAllPlayers;
+
+  showSpecific: boolean = true;
+  toggleSpecific = () => this.showSpecific = !this.showSpecific;
 }

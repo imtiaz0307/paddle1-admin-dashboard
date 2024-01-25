@@ -1,40 +1,116 @@
-<div class="top-bar">
-    <h3>Players</h3>
-    <button class="btn">
-        <p>+</p>
-        <p>Add New Player</p>
-    </button>
+<div [style.display]="showAllPlayers || showSpecific ? 'none':'block'">
+    <div class="top-bar">
+        <h3>Players</h3>
+        <button class="btn">
+            <p>+</p>
+            <p>Add New Player</p>
+        </button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Player Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>City</th>
+                <th>Gender</th>
+                <th>Dob</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of playersData">
+                <td>{{player.No}}</td>
+                <td>{{player.PlayerName}}</td>
+                <td>{{player.Email}}</td>
+                <td>{{player.Phone}}</td>
+                <td>{{player.City}}</td>
+                <td>{{player.Gender}}</td>
+                <td>{{player.Dob}}</td>
+                <td>
+                    <div class="actions">
+                        <button (click)="toggleShowAllPlayers()">Details</button>
+                        <span class="edit">edit</span>
+                        <span class="delete">delete</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>No</th>
-            <th>Player Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>City</th>
-            <th>Gender</th>
-            <th>Dob</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let player of playersData">
-            <td>{{player.No}}</td>
-            <td>{{player.PlayerName}}</td>
-            <td>{{player.Email}}</td>
-            <td>{{player.Phone}}</td>
-            <td>{{player.City}}</td>
-            <td>{{player.Gender}}</td>
-            <td>{{player.Dob}}</td>
-            <td>
-                <div class="actions">
-                    <button>Details</button>
-                    <span class="edit">edit</span>
-                    <span class="delete">delete</span>
+<!-- player details -->
+<div [style.display]="!showAllPlayers || showSpecific ? 'none':'block'">
+    <div class="header">
+        <button (click)="toggleShowAllPlayers()">
+            &larr;
+        </button>
+        <h3>Players</h3>
+    </div>
+    <div class="players">
+        <div (click)="toggleSpecific()" (click)="toggleShowAllPlayers()" class="player-card"
+            *ngFor="let player of playerCard">
+            <div class="pc-top">
+                <div class="pct-p">
+                    <img [src]="player.img" [alt]="player.name[0]">
+                    <h5>{{player.name}}</h5>
                 </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                <div class="pct-p">
+                    <img [src]="player.img" [alt]="player.name[0]">
+                    <h5>{{player.name}}</h5>
+                </div>
+            </div>
+            <div class="pc-bottom">
+                <span>Men Doubles</span>
+                <div>
+                    d
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- specific details -->
+<div [style.display]="showAllPlayers || !showSpecific ? 'none':'block'" class="card">
+    <div class="card-header">
+        <button (click)="toggleSpecific()" (click)="toggleShowAllPlayers()">
+            &larr;
+        </button>
+        <h3>Player Details</h3>
+    </div>
+    <div class="card-body">
+        <div class="cb-item">
+            <span>League</span>
+            <h5>Men_double</h5>
+        </div>
+        <div class="cb-item">
+            <span>Sport</span>
+            <h5>Tennis</h5>
+        </div>
+        <div class="cb-item">
+            <span>Playing</span>
+            <h5>Novo Partnervisto</h5>
+        </div>
+        <div class="cb-item">
+            <span>Play Often</span>
+            <h5>Jednon dsaojds</h5>
+        </div>
+        <div class="cb-item">
+            <span>Previous Match</span>
+            <h5>False</h5>
+        </div>
+        <div class="cb-item">
+            <span>Hear About League</span>
+            <h5>dhsaoidhs sdah</h5>
+        </div>
+        <div class="cb-item full">
+            <span>Preferred Language</span>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolore minima consequuntur facere.
+                Quo cum amet maiores magnam incidunt voluptatum. Reiciendis soluta iste, harum sequi saepe cupiditate
+                asperiores non corporis excepturi aspernatur odio fugit pariatur, eos aliquam dicta cumque rerum numquam
+                ducimus, quasi consequuntur cum neque! Reiciendis ex maiores placeat?</h5>
+        </div>
+    </div>
+</div>
