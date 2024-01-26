@@ -113,39 +113,41 @@
 
 <!-- add season -->
 <div class="modal-overlay" [class]="showAddSeasonModal ? 'modal-view' : ''">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Add New Season</h3>
-            <button (click)="toggleAddSeasonModal()">x</button>
-        </div>
-        <div class="modal-body">
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="season-name">Season Name:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type Name">
-                </div>
-                <div class="input-con">
-                    <label for="start-date">Start Date:</label>
-                    <input type="date" name="start-date" id="start-date">
-                </div>
+    <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Add New Season</h3>
+                <button (click)="toggleAddSeasonModal()">x</button>
             </div>
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="end-registration">End Registration:</label>
-                    <input type="date" name="end-registration" id="end-registration">
+            <div class="modal-body">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="season-name">Season Name:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type Name">
+                    </div>
+                    <div class="input-con">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" name="start-date" id="start-date">
+                    </div>
                 </div>
-                <div class="input-con">
-                    <label for="end-date">End Date:</label>
-                    <input type="date" name="end-date" id="start-date">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="end-registration">End Registration:</label>
+                        <input type="date" name="end-registration" id="end-registration">
+                    </div>
+                    <div class="input-con">
+                        <label for="end-date">End Date:</label>
+                        <input type="date" name="end-date" id="start-date">
+                    </div>
                 </div>
-            </div>
-            <div class="buttons-group">
-                <button class="btn primary">
-                    Submit
-                </button>
-                <button (click)="toggleAddSeasonModal()" class="btn primary outlined">
-                    Cancel
-                </button>
+                <div class="buttons-group">
+                    <button class="btn primary">
+                        Submit
+                    </button>
+                    <button (click)="toggleAddSeasonModal()" class="btn primary outlined">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -153,40 +155,42 @@
 
 <!-- edit season -->
 <div class="modal-overlay" [class]="showEditSeasonModal ? 'modal-view' : ''">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Edit Season</h3>
-            <button (click)="toggleEditSeasonModal(null)">x</button>
-        </div>
-        <div class="modal-body">
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="season-name">Season Name:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type Name"
-                        [value]="currentSeason?.Season">
-                </div>
-                <div class="input-con">
-                    <label for="start-date">Start Date:</label>
-                    <input type="date" name="start-date" id="start-date" [value]="currentSeason?.StartDate">
-                </div>
+    <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Edit Season</h3>
+                <button (click)="toggleEditSeasonModal(null)">x</button>
             </div>
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="end-registration">End Registration:</label>
-                    <input type="date" name="end-registration" id="end-registration">
+            <div class="modal-body">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="season-name">Season Name:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type Name"
+                            [value]="currentSeason?.Season">
+                    </div>
+                    <div class="input-con">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" name="start-date" id="start-date" [value]="currentSeason?.StartDate">
+                    </div>
                 </div>
-                <div class="input-con">
-                    <label for="end-date">End Date:</label>
-                    <input type="date" name="end-date" id="end-date" [value]="currentSeason?.EndDate">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="end-registration">End Registration:</label>
+                        <input type="date" name="end-registration" id="end-registration">
+                    </div>
+                    <div class="input-con">
+                        <label for="end-date">End Date:</label>
+                        <input type="date" name="end-date" id="end-date" [value]="currentSeason?.EndDate">
+                    </div>
                 </div>
-            </div>
-            <div class="buttons-group">
-                <button class="btn primary">
-                    Submit
-                </button>
-                <button (click)="toggleEditSeasonModal(null)" class="btn primary outlined">
-                    Cancel
-                </button>
+                <div class="buttons-group">
+                    <button class="btn primary">
+                        Submit
+                    </button>
+                    <button (click)="toggleEditSeasonModal(null)" class="btn primary outlined">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -194,35 +198,37 @@
 
 <!-- add league -->
 <div class="modal-overlay" [class]="showAddLeagueModal ? 'modal-view' : ''">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Add League</h3>
-            <button (click)="toggleAddLeagueModal()">x</button>
-        </div>
-        <div class="modal-body">
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="league-name">League Name:</label>
-                    <input type="text" name="league-name" id="league-name" placeholder="Type Name">
-                </div>
-                <div class="input-con">
-                    <label for="league-type">League Type:</label>
-                    <select name="league-type" id="league-type">
-                        <option value="" disabled>Select League Type</option>
-                        <option value="League">League Type 1</option>
-                        <option value="League">League Type 1</option>
-                        <option value="League">League Type 1</option>
-                        <option value="League">League Type 1</option>
-                    </select>
-                </div>
+    <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Add League</h3>
+                <button (click)="toggleAddLeagueModal()">x</button>
             </div>
-            <div class="buttons-group">
-                <button class="btn primary">
-                    Submit
-                </button>
-                <button (click)="toggleAddLeagueModal()" class="btn primary outlined">
-                    Cancel
-                </button>
+            <div class="modal-body">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="league-name">League Name:</label>
+                        <input type="text" name="league-name" id="league-name" placeholder="Type Name">
+                    </div>
+                    <div class="input-con">
+                        <label for="league-type">League Type:</label>
+                        <select name="league-type" id="league-type">
+                            <option value="" disabled>Select League Type</option>
+                            <option value="League">League Type 1</option>
+                            <option value="League">League Type 1</option>
+                            <option value="League">League Type 1</option>
+                            <option value="League">League Type 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons-group">
+                    <button class="btn primary">
+                        Submit
+                    </button>
+                    <button (click)="toggleAddLeagueModal()" class="btn primary outlined">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </div>

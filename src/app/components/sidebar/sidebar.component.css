@@ -61,3 +61,23 @@
 .nav_closed .nav_item .title {
     display: none;
 }
+
+@media screen and (max-width: 1500px) {
+    .nav {
+        width: 260px;
+        padding: 2rem 1rem;
+    }
+
+    .logo_toggle {
+        margin-bottom: 3rem;
+    }
+
+    .nav_item a {
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .nav_closed {
+        width: 100px;
+    }
+}

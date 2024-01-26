@@ -103,3 +103,56 @@
 .dc-item span {
     color: #afafaf;
 }
+
+@media screen and (max-width: 1500px) {
+    .card-body {
+        padding: 0 1.25rem 1.25rem;
+    }
+
+    .swiper img {
+        height: 350px;
+    }
+
+    .swiper-toggle {
+        height: 45px;
+        width: 45px;
+        font-size: 1rem;
+    }
+
+    .swiper-prev {
+        left: 10px;
+    }
+
+    .swiper-next {
+        right: 10px;
+    }
+
+    .preview {
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .bottom {
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .top {
+        padding: .7rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .dc-item {
+        padding: .7rem 1.2rem;
+        gap: 1.2rem;
+    }
+
+    .dc-item .icon {
+        min-height: 30px;
+        min-width: 30px;
+    }
+
+    .dc-item span {
+        font-size: .7rem;
+    }
+}

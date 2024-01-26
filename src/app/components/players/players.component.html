@@ -117,53 +117,55 @@
 
 <!-- add player modal -->
 <div class="modal-overlay" [class]="showAddPlayerModal ? 'modal-view' : ''">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Add New Player</h3>
-            <button (click)="toggleAddPlayerModal()">x</button>
-        </div>
-        <div class="modal-body">
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="season-name">City:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type city">
-                </div>
-                <div class="input-con">
-                    <label for="start-date">Sports:</label>
-                    <select>
-                        <option value="">Select Sports</option>
-                    </select>
-                </div>
+    <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Add New Player</h3>
+                <button (click)="toggleAddPlayerModal()">x</button>
             </div>
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="start-date">Gender</label>
-                    <select>
-                        <option value="">Select Sports</option>
-                    </select>
+            <div class="modal-body">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="season-name">City:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type city">
+                    </div>
+                    <div class="input-con">
+                        <label for="start-date">Sports:</label>
+                        <select>
+                            <option value="">Select Sports</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input-con">
-                    <label for="start-date">League:</label>
-                    <select>
-                        <option value="">Select Sports</option>
-                    </select>
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="start-date">Gender</label>
+                        <select>
+                            <option value="">Select Sports</option>
+                        </select>
+                    </div>
+                    <div class="input-con">
+                        <label for="start-date">League:</label>
+                        <select>
+                            <option value="">Select Sports</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="start-date">Active Seasons:</label>
-                    <select>
-                        <option value="">Select Sports</option>
-                    </select>
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="start-date">Active Seasons:</label>
+                        <select>
+                            <option value="">Select Sports</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="buttons-group">
-                <button class="btn primary">
-                    Submit
-                </button>
-                <button (click)="toggleAddPlayerModal()" class="btn primary outlined">
-                    Cancel
-                </button>
+                <div class="buttons-group">
+                    <button class="btn primary">
+                        Submit
+                    </button>
+                    <button (click)="toggleAddPlayerModal()" class="btn primary outlined">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </div>

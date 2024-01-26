@@ -140,6 +140,7 @@ td img {
     border-radius: 7px;
     padding: 1rem;
     font-size: 1rem;
+    background-color: white;
 }
 
 .card {
@@ -180,13 +181,18 @@ td img {
     left: 0;
     background-color: #f3f1f94f;
     backdrop-filter: blur(2px);
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    align-items: center;
     opacity: 0;
     pointer-events: none;
     transition: 500ms;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .modal-dialog {
@@ -197,6 +203,7 @@ td img {
     box-shadow: 0 0 10px var(--color-shadow);
     overflow: hidden;
     transform: translateY(400px);
+    height: fit-content;
     transition: 500ms;
 }
 
@@ -215,6 +222,7 @@ td img {
     background-color: var(--color-red);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5rem 2rem;
 }
 
@@ -333,4 +341,140 @@ td img {
     display: grid;
     place-items: center;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+    table {
+        margin-top: 2rem;
+    }
+
+    th,
+    td {
+        padding: 1rem;
+        font-size: .7rem;
+    }
+
+    td img {
+        width: 160px;
+        height: 120px;
+    }
+
+    .description {
+        max-width: 180px;
+    }
+
+    .actions {
+        gap: 1rem;
+    }
+
+    .actions button {
+        font-size: .7rem;
+    }
+
+    .top-bar h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        font-size: .7rem;
+        padding: .75rem 1.25rem;
+        gap: .75rem;
+    }
+
+    .btn p:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    .input-container label {
+        font-size: .8rem;
+        top: -23px;
+    }
+
+    .input-container select {
+        padding: .75rem;
+        font-size: .7rem;
+    }
+
+    .card-header {
+        padding: 1.25rem;
+        gap: .8rem;
+    }
+
+    .card-header button {
+        height: 30px;
+        width: 30px;
+        font-size: .8rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .modal-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .modal-header h3 {
+        font-size: 1rem;
+    }
+
+    .modal-header button {
+        font-size: 1rem;
+    }
+
+    .modal-body {
+        padding: 1.4rem;
+    }
+
+    .modal-body .mb-head {
+        font-size: 1.2rem;
+    }
+
+    .modal-body .input-con label {
+        font-size: .7rem;
+    }
+
+    .modal-body .input-con input,
+    .modal-body .input-con select,
+    .modal-body .input-con textarea {
+        font-size: .7rem;
+        max-height: 100px;
+    }
+
+    .modal-body .buttons-group {
+        gap: 1rem;
+    }
+
+    .modal-body .files {
+        gap: 1.25rem;
+    }
+
+    .add-file {
+        height: 120px;
+        min-width: 120px;
+    }
+
+    .add-file h2 {
+        font-size: 3rem;
+    }
+
+    .uploaded-files {
+        gap: 1rem;
+    }
+
+    .uploaded-file {
+        height: 120px;
+        min-width: 120px;
+        max-width: 120px;
+    }
+
+    .uploaded-file .close {
+        height: 25px;
+        width: 25px;
+        font-size: .7rem;
+    }
 }

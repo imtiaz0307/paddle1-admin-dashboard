@@ -35,3 +35,27 @@
     margin-top: 5px;
 
 }
+
+@media screen and (max-width: 1500px) {
+    .cards {
+        gap: 1rem;
+    }
+
+    .card {
+        padding: .75rem;
+        gap: .75rem;
+    }
+
+    .icon-con {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-details span {
+        font-size: .75rem;
+    }
+
+    .card-details h5 {
+        font-size: 1rem;
+    }
+}

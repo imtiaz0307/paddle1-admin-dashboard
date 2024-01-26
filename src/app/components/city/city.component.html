@@ -36,39 +36,41 @@
 </table>
 
 <div class="modal-overlay" [class]="showAddCityModal ? 'modal-view' : ''">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <h3>Add New City</h3>
-            <button (click)="toggleAddCityModal()">x</button>
-        </div>
-        <div class="modal-body">
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="season-name">City Name:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type city name">
-                </div>
-                <div class="input-con">
-                    <label for="season-name">Contact Name:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type Contact Name">
-                </div>
+    <div class="modal-content">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Add New City</h3>
+                <button (click)="toggleAddCityModal()">x</button>
             </div>
-            <div class="inputs-group">
-                <div class="input-con">
-                    <label for="season-name">Email:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type Email">
+            <div class="modal-body">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="season-name">City Name:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type city name">
+                    </div>
+                    <div class="input-con">
+                        <label for="season-name">Contact Name:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type Contact Name">
+                    </div>
                 </div>
-                <div class="input-con">
-                    <label for="season-name">Phone:</label>
-                    <input type="text" name="season-name" id="season-name" placeholder="Type Phone">
+                <div class="inputs-group">
+                    <div class="input-con">
+                        <label for="season-name">Email:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type Email">
+                    </div>
+                    <div class="input-con">
+                        <label for="season-name">Phone:</label>
+                        <input type="text" name="season-name" id="season-name" placeholder="Type Phone">
+                    </div>
                 </div>
-            </div>
-            <div class="buttons-group">
-                <button class="btn primary">
-                    Submit
-                </button>
-                <button (click)="toggleAddCityModal()" class="btn primary outlined">
-                    Cancel
-                </button>
+                <div class="buttons-group">
+                    <button class="btn primary">
+                        Submit
+                    </button>
+                    <button (click)="toggleAddCityModal()" class="btn primary outlined">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     </div>

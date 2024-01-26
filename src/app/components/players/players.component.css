@@ -145,3 +145,88 @@
 .cb-item.full {
     grid-column: 1/4;
 }
+
+@media screen and (max-width: 1500px) {
+    .header {
+        gap: .9rem;
+    }
+
+    .header button {
+        height: 30px;
+        width: 30px;
+        font-size: .7rem;
+    }
+
+    .header h3 {
+        font-size: 1.25rem;
+    }
+
+    .players {
+        gap: 1rem;
+    }
+
+    .player-card {
+        min-width: 230px;
+        max-width: 230px;
+    }
+
+    .pc-top {
+        gap: .75rem;
+        padding: .75rem;
+    }
+
+    .pct-p img {
+        scale: 4;
+    }
+
+    .pct-p h5 {
+        font-size: .7rem;
+    }
+
+    .pc-bottom {
+        padding: .75rem;
+    }
+
+    .pc-bottom span {
+        font-size: .7rem;
+    }
+
+    .pc-bottom div {
+        height: 25px;
+        width: 25px;
+        font-size: .7rem;
+    }
+
+    .card-header {
+        padding: 20px;
+        gap: .8rem;
+    }
+
+    .card-header button {
+        height: 30px;
+        width: 30px;
+        font-size: .8rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .card-body {
+        padding: 20px;
+        column-gap: 1.5rem;
+        row-gap: 3rem;
+    }
+
+    .cb-item {
+        gap: 7px;
+    }
+
+    .cb-item span {
+        font-size: .7rem;
+    }
+
+    .cb-item h5 {
+        font-size: 1.1rem;
+    }
+}

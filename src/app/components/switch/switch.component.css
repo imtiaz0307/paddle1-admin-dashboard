@@ -38,3 +38,19 @@
     transform: translateX(30px);
     background-color: var(--color-blue-light);
 }
+
+@media screen and (max-width: 1500px) {
+    .switch-container {
+        width: 45px;
+        height: 22px;
+    }
+
+    .switch-thumb {
+        height: 16px;
+        width: 16px;
+    }
+
+    .switch-container input:checked+.switch-track .switch-thumb {
+        transform: translateX(23px);
+    }
+}
