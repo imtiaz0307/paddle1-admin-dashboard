@@ -2,7 +2,8 @@
     <div class="cards">
         <div class="card" *ngFor="let item of cardsData">
             <div class="icon-con" [style.backgroundColor]="item.color">
-                {{item.icon}}
+                <!-- {{item.icon}} -->
+                <img [src]="item.icon" alt="">
             </div>
             <div class="card-details">
                 <span>{{item.title}}</span>

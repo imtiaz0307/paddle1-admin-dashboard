@@ -10,25 +10,25 @@ export class DashboardComponent {
     {
       title: "Seasons",
       count: 2342,
-      icon: "icon",
+      icon: "../../../assets/season.png",
       color: "#ffeec3"
     },
     {
       title: "Players",
       count: 2342,
-      icon: "icon",
+      icon: "../../../assets/player.png",
       color: "#d1f3ff"
     },
     {
       title: "Clubs",
       count: 2342,
-      icon: "icon",
+      icon: "../../../assets/calendar.svg",
       color: "#ceffd5"
     },
     {
       title: "Cities",
       count: 2342,
-      icon: "icon",
+      icon: "../../../assets/city.png",
       color: "#fccaff"
     },
   ]

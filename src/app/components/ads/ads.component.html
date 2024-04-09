@@ -30,8 +30,12 @@
             <td>{{ads.Sports}}</td>
             <td>
                 <div class="actions">
-                    <span class="edit">edit</span>
-                    <span class="delete">delete</span>
+                    <button class="edit">
+                        <img src="../../../assets/edit.svg" alt="">
+                    </button>
+                    <button class="delete">
+                        <img src="../../../assets/trash.svg" alt="">
+                    </button>
                 </div>
             </td>
         </tr>
@@ -43,18 +47,25 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Add New Ad</h3>
-                <button (click)="toggleAddAdsModal()">x</button>
+                <button (click)="toggleAddAdsModal()">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="files">
                     <label class="add-file" for="add-file">
                         <input type="file" name="add-file" id="add-file" hidden>
-                        <h2>+</h2>
+                        <!-- 
+                        <img src="../../../assets/add-image.svg" alt=""> -->
+                        <img src="../../../assets/add-image.svg" alt="">
                     </label>
                     <div class="uploaded-files">
                         <div class="uploaded-file">
                             <img src="../../../assets/image.jpg" alt="uploaded">
-                            <div class="close">x</div>
+                            <div class="close">
+                                <img src="../../../assets/x.svg" alt=""
+                                    style="height: 14px !important; width: 14px !important; object-fit: contain; margin-bottom: 0px;">
+                            </div>
                         </div>
                     </div>
                 </div>

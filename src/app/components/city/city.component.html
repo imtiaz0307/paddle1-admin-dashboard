@@ -27,8 +27,14 @@
             <td>
                 <div class="actions">
                     <app-switch></app-switch>
-                    <span class="edit">edit</span>
-                    <span class="delete">delete</span>
+                    <!-- <span class="edit">edit</span>
+                    <span class="delete">delete</span> -->
+                    <button class="edit">
+                        <img src="../../../assets/edit.svg" alt="">
+                    </button>
+                    <button class="delete">
+                        <img src="../../../assets/trash.svg" alt="">
+                    </button>
                 </div>
             </td>
         </tr>
@@ -40,7 +46,9 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Add New City</h3>
-                <button (click)="toggleAddCityModal()">x</button>
+                <button (click)="toggleAddCityModal()">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="inputs-group">

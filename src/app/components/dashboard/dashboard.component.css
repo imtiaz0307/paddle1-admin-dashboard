@@ -24,6 +24,11 @@
     border-radius: 5px;
 }
 
+.icon-con img{
+    width: 70%;
+    object-fit: contain;
+}
+
 .card-details span {
     font-size: .9rem;
     color: #afafaf;

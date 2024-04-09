@@ -32,8 +32,14 @@
                 <td>
                     <div class="actions">
                         <button (click)="toggleShowAllPlayers()">Details</button>
-                        <span class="edit">edit</span>
-                        <span class="delete">delete</span>
+                        <!-- <span class="edit">edit</span>
+                        <span class="delete">delete</span> -->
+                        <button class="edit">
+                            <img src="../../../assets/edit.svg" alt="">
+                        </button>
+                        <button class="delete">
+                            <img src="../../../assets/trash.svg" alt="">
+                        </button>
                     </div>
                 </td>
             </tr>
@@ -45,7 +51,7 @@
 <div [style.display]="!showAllPlayers || showSpecific ? 'none':'block'">
     <div class="header">
         <button (click)="toggleShowAllPlayers()">
-            &larr;
+            <img src="../../../assets/back.svg" alt="">
         </button>
         <h3>Players</h3>
     </div>
@@ -64,9 +70,10 @@
             </div>
             <div class="pc-bottom">
                 <span>Men Doubles</span>
-                <div>
+                <!-- <div>
                     d
-                </div>
+                </div> -->
+                <img src="../../../assets/trash_d.svg" alt="">
             </div>
         </div>
     </div>
@@ -76,7 +83,7 @@
 <div [style.display]="showAllPlayers || !showSpecific ? 'none':'block'" class="card">
     <div class="card-header">
         <button (click)="toggleSpecific()" (click)="toggleShowAllPlayers()">
-            &larr;
+            <img src="../../../assets/back.svg" alt="">
         </button>
         <h3>Player Details</h3>
     </div>
@@ -121,7 +128,9 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Add New Player</h3>
-                <button (click)="toggleAddPlayerModal()">x</button>
+                <button (click)="toggleAddPlayerModal()">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="inputs-group">

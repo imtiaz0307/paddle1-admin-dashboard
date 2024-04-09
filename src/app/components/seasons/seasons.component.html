@@ -57,8 +57,14 @@
                 <td>
                     <div class="actions">
                         <button (click)="toggleLeague()">Leagues</button>
-                        <span class="edit" (click)="toggleEditSeasonModal(season)">edit</span>
-                        <span class="delete">delete</span>
+                        <!-- <span class="edit" (click)="toggleEditSeasonModal(season)">edit</span> -->
+                        <button class="edit" (click)="toggleEditSeasonModal(season)">
+                            <img src="../../../assets/edit.svg" alt="">
+                        </button>
+                        <button class="delete">
+                            <img src="../../../assets/trash.svg" alt="">
+                        </button>
+                        <!-- <span class="delete">delete</span> -->
                     </div>
                 </td>
             </tr>
@@ -96,7 +102,10 @@
                     <div class="actions">
                         <button (click)="toggleGroup()">Groups</button>
                         <button class="danger">Structure</button>
-                        <span class="delete">delete</span>
+                        <!-- <span class="delete">delete</span> -->
+                        <button class="delete">
+                            <img src="../../../assets/trash.svg" alt="">
+                        </button>
                     </div>
                 </td>
             </tr>
@@ -117,7 +126,9 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Add New Season</h3>
-                <button (click)="toggleAddSeasonModal()">x</button>
+                <button (click)="toggleAddSeasonModal()">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="inputs-group">
@@ -159,7 +170,9 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Edit Season</h3>
-                <button (click)="toggleEditSeasonModal(null)">x</button>
+                <button (click)="toggleEditSeasonModal(null)">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="inputs-group">
@@ -202,7 +215,9 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <h3>Add League</h3>
-                <button (click)="toggleAddLeagueModal()">x</button>
+                <button (click)="toggleAddLeagueModal()">
+                    <img src="../../../assets/x.svg" alt="" style="height: 20px; width: 20px; object-fit: contain;">
+                </button>
             </div>
             <div class="modal-body">
                 <div class="inputs-group">

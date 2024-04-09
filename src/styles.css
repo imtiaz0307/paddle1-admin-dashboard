@@ -70,12 +70,28 @@ td img {
     color: var(--color-red);
 }
 
-.actions .edit {
+/* .actions .edit {
     color: var(--color-blue-light);
 }
 
 .actions .delete {
     color: var(--color-red);
+} */
+
+.edit,
+.delete {
+    border: none !important;
+    outline: none !important;
+    background-color: transparent;
+}
+
+.edit img,
+.delete img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    object-fit: contain;
 }
 
 .top-bar {
